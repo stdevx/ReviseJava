@@ -1,5 +1,7 @@
 # **Java 基础复习**
 
+JDK版本：1.8
+
 1. volatile
 
    volatile_example

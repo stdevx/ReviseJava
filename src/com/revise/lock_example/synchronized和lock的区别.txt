@@ -1,0 +1,10 @@
+具体实现
+1. synchronized为JVM关键字（底层monitor对象完成，monitorenter和monitorexit），lock为API类
+使用方式
+2. synchronized不会发生死锁（双重保证，代码执行完自动释放），lock可能会（需用户主动解锁）
+等待是否可中断
+3. synchronized不可被打断，lock则可以被打断（a.tryLock超时方式，b.代码放入lockInterruptibly中调用interrupt方法）
+锁是否公平
+4. synchronized为非公平锁，lock则两者皆可（默认非公平）
+是否可绑定多个条件Condition
+5. synchronized没有（只能随机唤醒一个或全部唤醒），lock则可以（可用于精确唤醒）
